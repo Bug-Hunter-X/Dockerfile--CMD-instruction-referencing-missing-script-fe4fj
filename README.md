@@ -1,0 +1,1 @@
+This repository demonstrates a common error in Dockerfiles: referencing a script in the CMD instruction that isn't copied into the image. The original `Dockerfile` attempts to run `/app/my_script.py`, but this file is never added to the image.  The solution, `DockerfileFixed`, addresses this by adding a `COPY` instruction to include the script.
